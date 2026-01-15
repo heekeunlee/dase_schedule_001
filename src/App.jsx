@@ -7,8 +7,22 @@ import WeeklySchedule from './components/WeeklySchedule';
 import { schedules } from './data/schedules';
 
 function App() {
+  const getInitialDay = () => {
+    const day = new Date().getDay();
+    const map = {
+      0: 'sun',
+      1: 'mon',
+      2: 'tue',
+      3: 'wed',
+      4: 'thu',
+      5: 'fri',
+      6: 'sat'
+    };
+    return map[day] || 'mon';
+  };
+
   const [currentPerson, setCurrentPerson] = useState('dawon');
-  const [currentDay, setCurrentDay] = useState('mon');
+  const [currentDay, setCurrentDay] = useState(getInitialDay());
   const [viewMode, setViewMode] = useState('day'); // 'day' or 'week'
 
   const activeSchedule = schedules[currentPerson];
