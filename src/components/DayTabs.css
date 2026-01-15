@@ -1,0 +1,45 @@
+.day-tabs-container {
+    padding: 16px 0;
+    background-color: var(--color-bg);
+    position: sticky;
+    top: var(--header-height);
+    z-index: 5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.day-tabs {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0 20px;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scroll-behavior: smooth;
+}
+
+.day-tabs::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.day-tab {
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--color-surface);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--shadow-sm);
+}
+
+.day-tab:active {
+    transform: scale(0.95);
+}

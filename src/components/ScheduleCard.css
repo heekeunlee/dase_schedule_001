@@ -1,0 +1,74 @@
+.schedule-card {
+    display: flex;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid transparent;
+    /* Set via inline style */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-items: center;
+}
+
+.schedule-card:active {
+    transform: scale(0.98);
+}
+
+.schedule-card.sub-task {
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-left: 20px;
+    border-left-width: 2px;
+}
+
+.time-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 60px;
+    margin-right: 16px;
+    text-align: center;
+}
+
+.start-time {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.end-time {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    margin-top: 2px;
+}
+
+.content-column {
+    flex: 1;
+}
+
+.card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 6px;
+}
+
+.card-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.location-badge {
+    font-size: 0.75rem;
+    background-color: var(--color-bg);
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.note-text {
+    font-size: 0.75rem;
+    color: #9CA3AF;
+}
